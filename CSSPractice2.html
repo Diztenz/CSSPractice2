@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice 2</title>
+</head>
+<body>
+    <header>
+        <h1>CSSPractice2</h1>
+
+    </header>
+    <h2>Create Visual Balance Using the text-align Property</h2>
+    <p>
+        This section of the curriculum focuses on Applied Visual Design. <br>
+        The first group of challenges build on the given card layout to show a number of core principles.<br>
+<br>
+Text is often a large part of web content. CSS has several options for how to align it with the text-align property.<br>
+<br>
+text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.<br>
+<br>
+text-align: center; centers the text<br>
+<br>
+text-align: right; right-aligns the text<br>
+<br>
+And text-align: left; (the default) left-aligns the text.<br>
+<br>
+<strong>Align the h4 tag's text, which says "Google", to the center. Then justify the paragraph tag which contains <br>
+    information about how Google was founded.<br>
+    text-align: center;<br>
+</strong><br>
+<h2>Adjust the Width of an Element Using the width Property</h2>
+<p>
+    You can specify the width of an element using the width property in CSS.<br> 
+    Values can be given in relative length units (such as em), absolute length units (such as px), <br>
+    or as a percentage of its containing parent element. Here's an example that changes the width of an image to 220px:<br>
+<br>
+img {<br>
+  width: 220px;<br>
+}<br>
+<strong>Add a width property to the entire card and set it to an absolute value of 245px. <br>
+    Use the fullCard class to select the element.<br>
+</strong>
+</p>
+ <h2>Adjust the Height of an Element Using the height PropertyPassed</h2>  
+ <p>
+    You can specify the height of an element using the height property in CSS, <br>
+    similar to the width property. Here's an example that changes the height of an image to 20px:<br>
+<br>
+    img {<br>
+      height: 20px;<br>
+    }<br>
+    <strong>
+    Add a height property to the h4 tag and set it to 25px.<br>
+    <br>
+    Note: You may need to be at 100% zoom to pass the test on this challenge.<br>
+</strong>    <br>
+ </p> 
+    <h2>Use the strong Tag to Make Text Bold</h2>
+    <p>
+        To make text bold, you can use the strong tag. This is often used to draw attention to text <br>
+        and symbolize that it is important. With the strong tag, the browser applies the CSS of <br>
+        font-weight: bold; to the element.<br>
+        &lt;strong> bold text goes here &lt;/strong><br>
+    <strong>Wrap a strong tag around Stanford University text inside the p tag <br>
+        (do not include the period).</strong><br>
+        </p>
+    <h2>Use the u Tag to Underline Text</h2>
+    <p>
+        To underline text, you can use the u tag. This is often used to signify that a section of text is important, <br>
+        or something to remember. With the u tag, the browser applies the CSS of text-decoration: underline; to the element.<br>
+<br>
+<strong>Wrap the u tag only around the text Ph.D. students.<br>
+<u>&lt;u> underlined text goes here. &lt;/u></u>
+</strong><br>
+<br>
+Note: Try to avoid using the u tag when it could be confused for a link. <br>
+Anchor tags also have a default underlined formatting.<br>
+    </p>
+    <h2>Use the em Tag to Italicize Text</h2>
+    <p>
+        To emphasize text, you can use the em tag. This displays text as italicized, <br>
+        as the browser applies the CSS of font-style: italic; to the element.<br>
+<br>
+<strong>Wrap an em tag around the contents of the paragraph tag to give it emphasis.</strong><br>
+
+    </p>
+    <h2>Use the s Tag to Strikethrough TextPassed</h2>
+    <p>
+    To strikethrough text, which is when a horizontal line cuts across the characters, <br>
+    you can use the s tag. It shows that a section of text is no longer valid. With the s tag, <br>
+    the browser applies the CSS of text-decoration: line-through; to the element.<br>
+<br>
+<strong>Wrap the s tag around Google inside the h4 tag and then add the word Alphabet beside it, <br>
+    which should not have the strikethrough formatting.</strong><br>
+    </p>
+    <h2>Create a Horizontal Line Using the hr ElementPassed</h2>
+    <p>
+        You can use the hr tag to add a horizontal line across the width of its containing element. <br>
+        This can be used to define a change in topic or to visually separate groups of content.<br>
+        &lt;hr><br>
+        <strong>Add an hr tag underneath the h4 which contains the card title.<br>
+<br>
+Note: In HTML, hr is a self-closing tag, and therefore doesn't need a separate closing tag.<br>
+</strong>
+<style>
+  h4 {
+    text-align: center;
+    height: 25px;
+  }
+  p {
+    text-align: justify;
+  }
+  .links {
+    text-align: left;
+    color: black;
+  }
+  .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+  .cardText {
+    margin-bottom: 30px;
+  }
+</style>
+<div class="fullCard">
+  <div class="cardContent">
+    <div class="cardText">
+      <h4><s>Google</s>Alphabet</h4>
+
+      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+    </div>
+    <div class="cardLinks">
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+    </div>
+  </div>
+</div>
+    </p>
+</body>
+
+</html>
