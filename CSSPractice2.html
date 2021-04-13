@@ -103,46 +103,297 @@ Anchor tags also have a default underlined formatting.<br>
 <br>
 Note: In HTML, hr is a self-closing tag, and therefore doesn't need a separate closing tag.<br>
 </strong>
-<style>
-  h4 {
-    text-align: center;
-    height: 25px;
-  }
-  p {
-    text-align: justify;
-  }
-  .links {
-    text-align: left;
-    color: black;
-  }
-  .fullCard {
-    width: 245px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px 5px;
-    padding: 4px;
-  }
-  .cardContent {
-    padding: 10px;
-  }
-  .cardText {
-    margin-bottom: 30px;
-  }
-</style>
-<div class="fullCard">
-  <div class="cardContent">
-    <div class="cardText">
-      <h4><s>Google</s>Alphabet</h4>
-
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
-    </div>
-    <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
-    </div>
-  </div>
-</div>
+&lt;style><br>
+  h4 {<br>
+    text-align: center;<br>
+    height: 25px;<br>
+  }<br>
+  p {<br>
+    text-align: justify;<br>
+  }<br>
+  .links {<br>
+    text-align: left;<br>
+    color: black;<br>
+  }<br>
+  .fullCard {<br>
+    width: 245px;<br>
+    border: 1px solid #ccc;<br>
+    border-radius: 5px;<br>
+    margin: 10px 5px;<br>
+    padding: 4px;<br>
+  }<br>
+  .cardContent {<br>
+    padding: 10px;<br>
+  }<br>
+  .cardText {<br>
+    margin-bottom: 30px;<br>
+  }<br>
+&lt;/style><br>
+&lt;div class="fullCard"><br>
+  &lt;div class="cardContent"><br>
+    &lt;div class="cardText"><br>
+      &lt;h4>&lt;s>Google&lt;/s>Alphabet&lt;/h4><br>
+    &lt;hr><br>
+      &lt;p>&lt;em>Google was founded by Larry Page and Sergey Brin while they were &lt;u>Ph.D. students&lt;/u> at &lt;strong>Stanford University&lt;/strong>.&lt;/em>&lt;/p>
+    &lt;/div><br>
+    &lt;div class="cardLinks"><br>
+      &lt;a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page&lt;/a>&lt;br>&lt;br><br>
+      &lt;a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin&lt;/a><br>
+    &lt;/div><br>
+  &lt;/div><br>
+&lt;/div><br>
+<img src="sample2.png">
     </p>
+
+    <h2>Adjust the background-color Property of Text</h2>
+    <p>
+        Instead of adjusting your overall background or the color of the text to make the foreground easily readable, <br>
+        you can add a background-color to the element holding the text you want to emphasize. This challenge uses rgba() <br>
+        instead of hex codes or normal rgb().<br>
+<br>
+rgba stands for:<br>
+  r = red<br>
+  g = green<br>
+  b = blue<br>
+  a = alpha/level of opacity<br>
+The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, <br>
+which is fully transparent or clear. rgba() is great to use in this case, as it allows you to adjust the opacity. <br>
+This means you don't have to completely block out the background.<br>
+<br>
+You'll use background-color: rgba(45, 45, 45, 0.1) for this challenge. It produces a dark gray color that is nearly transparent <br>
+given the low opacity value of 0.1.<br>
+<br>
+The below would be inside the &lt;style>&lt;/style><br>
+h4 {<br>
+    text-align: center;<br>
+    background-color: rgba(45, 45, 45, 0.1);<br>
+    padding: 10px;<br>
+<br>
+  }<br>
+    </p>
+    <img src="sample1.png">
+
+    <h2>Adjust the Size of a Header Versus a Paragraph Tag</h2>
+
+<p>
+    The font size of header tags (h1 through h6) should generally be larger than the <br>
+    font size of paragraph tags. This makes it easier for the user to visually understand the <br>
+    layout and level of importance of everything on the page. You use the font-size property to <br>
+    adjust the size of the text in an element.<br>
+<br>
+To make the heading significantly larger than the paragraph, <br>
+change the font-size of the h4 tag to 27 pixels.<br>
+<br>
+h4 {<br>
+    text-align: center;<br>
+    background-color: rgba(45, 45, 45, 0.1);<br>
+    padding: 10px;<br>
+    font-size: 27px;<br>
+  }<br>
+</p>
+<img src="sample3.png">
+<h2>Add a box-shadow to a Card-like Element</h2>
+<p>
+    The box-shadow property applies one or more shadows to an element.<br>
+<br>
+The box-shadow property takes values for<br>
+<br>
+offset-x (how far to push the shadow horizontally from the element),<br>
+offset-y (how far to push the shadow vertically from the element),<br>
+blur-radius,<br>
+spread-radius and<br>
+color, in that order.<br>
+The blur-radius and spread-radius values are optional.<br>
+<br>
+Multiple box-shadows can be created by using commas to separate properties of each box-shadow element.<br>
+<br>
+Here's an example of the CSS to create multiple shadows with some blur, at mostly-transparent black colors:<br>
+<br>
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);<br>
+The element now has an id of thumbnail. With this selector, use the example CSS values above to place a box-shadow on the card.<br>
+<br>
+#thumbnail {<br>
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); <br>
+   }<br>
+   <br>
+   The above would be inside the &lt;style>&lt;/style><br>
+   The below would be in the &lt;div>&lt;/div> element.<br>
+   &lt;div class="fullCard" id="thumbnail">&lt;/div><br>
+   <br>
+   
+</p>
+<img src="sample4.png">
+<h2>Decrease the Opacity of an Element</h2>
+<p>
+    The opacity property in CSS is used to adjust the opacity, or conversely, <br>
+    the transparency for an item.<br>
+<br>
+A value of 1 is opaque, which isn't transparent at all.<br>
+A value of 0.5 is half see-through.<br>
+A value of 0 is completely transparent.<br>
+The value given will apply to the entire element, whether that's an image with some transparency, <br>
+or the foreground and background colors for a block of text.<br>
+<br>
+Set the opacity of the anchor tags to 0.7 using links class to select them.<br>
+<br>
+.links {<br>
+    text-align: left;<br>
+    color: black;<br>
+    opacity: 0.7;<br>
+  }<br>
+  <br>
+  &lt;a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page&lt;/a>&lt;br>&lt;br><br>
+      &lt;a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin&lt;/a><br>
+</p>
+<img src="sample5.png">
+<h2>Use the text-transform Property to Make Text Uppercase</h2>
+<p>
+    The text-transform property in CSS is used to change the appearance of text.<br> 
+    It's a convenient way to make sure text on a webpage appears consistently,<br> 
+    without having to change the text content of the actual HTML elements.<br>
+<br>
+The following table shows how the different text-transformvalues change <br>
+the example text "Transform me".<br>
+<br>
+Value	Result<br>
+lowercase	"transform me"<br>
+uppercase	"TRANSFORM ME"<br>
+capitalize	"Transform Me"<br>
+initial	Use the default value<br>
+inherit	Use the text-transform value from the parent element<br>
+none	Default: Use the original text<br>
+Transform the text of the h4 to be uppercase using the text-transform property.<br>
+<br><br>
+h4 {<br>
+    text-align: center;<br>
+    background-color: rgba(45, 45, 45, 0.1);<br>
+    padding: 10px;<br>
+    font-size: 27px;<br>
+    text-transform: uppercase;<br>
+  }<br>
+</p>
+<img src="sample6.png">
+<h2>Set the font-size for Multiple Heading Elements</h2>
+    <p>
+        The font-size property is used to specify how large the text is in a given element. <br>
+        This rule can be used for multiple elements to create visual consistency of text on a page. <br>
+        In this challenge, you'll set the values for all h1 through h6 tags to balance the heading sizes.<br>
+<br>
+In the style tags, set the font-size of the:<br>
+<br>
+h1 tag to 68px.<br>
+h2 tag to 52px.<br>
+h3 tag to 40px.<br>
+h4 tag to 32px.<br>
+h5 tag to 21px.<br>
+h6 tag to 14px.<br>
+<br>
+&lt;style><br>
+    h1 {<br>
+      font-size: 68px;<br>
+    }<br>
+    h2 {<br>
+      font-size: 52px;<br>
+    }<br>
+    h3 {<br>
+      font-size: 40px;<br>
+    }<br>
+    h4 {<br>
+      font-size: 32px;<br>
+    }<br>
+    h5 {<br>
+      font-size: 21px;<br>
+    }<br>
+    h6 {<br>
+      font-size: 14px;<br>
+    }<br>
+  &lt;/style><br>
+    </p>
+<img src="sample7.png">
+<h2>Set the font-weight for Multiple Heading Elements</h2>
+<p>
+    You set the font-size of each heading tag in the last challenge, <br>
+    here you'll adjust the font-weight.<br>
+<br>
+The font-weight property sets how thick or thin characters are in a section of text.<br>
+<br>
+Set the font-weight of the h1 tag to 800.<br>
+Set the font-weight of the h2 tag to 600.<br>
+Set the font-weight of the h3 tag to 500.<br>
+Set the font-weight of the h4 tag to 400.<br>
+Set the font-weight of the h5 tag to 300.<br>
+Set the font-weight of the h6 tag to 200.<br>
+<br>
+&lt;style><br>
+    h1 {<br>
+      font-size: 68px;<br>
+      font-weight: 800;<br>
+    }<br>
+    h2 {<br>
+      font-size: 52px;<br>
+      font-weight: 600;<br>
+    }<br>
+    h3 {<br>
+      font-size: 40px;<br>
+      font-weight: 500;<br>
+    }<br>
+    h4 {<br>
+      font-size: 32px;<br>
+      font-weight: 400;<br>
+    }<br>
+    h5 {<br>
+      font-size: 21px;<br>
+      font-weight: 300;<br>
+    }<br>
+    h6 {<br>
+      font-size: 14px;<br>
+      font-weight: 200;<br>
+    }<br>
+  &lt;/style><br>
+  &lt;h1>This is h1 text&lt;/h1><br>
+  &lt;h2>This is h2 text&lt;/h2><br>
+  &lt;h3>This is h3 text&lt;/h3><br>
+  &lt;h4>This is h4 text&lt;/h4><br>
+  &lt;h5>This is h5 text&lt;/h5><br>
+  &lt;h6>This is h6 text&lt;/h6><br>
+</p>
+<img src="sample8.png">
+<h2>Set the font-size of Paragraph Text</h2>
+<p>
+    The font-size property in CSS is not limited to headings, <br>
+    it can be applied to any element containing text.<br>
+<br>
+Change the value of the font-size property for the paragraph <br>
+to 16px to make it more visible.<br>
+<br>
+&lt;style><br>
+    p {<br>
+      font-size: 16px;<br>
+    }<br>
+  &lt;/style><br>
+  &lt;p><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi <br>
+    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br>
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+  &lt;/p><br>
+</p>
+<h2>Set the line-height of Paragraphs</h2>
+<p>
+    CSS offers the line-height property to change the height of each line in a block of text. <br>
+    As the name suggests, it changes the amount of vertical space that each line of text gets.<br>
+<br>
+Add a line-height property to the p tag and set it to 25px.<br>
+<br>
+&lt;style><br>
+    p {<br>
+      font-size: 16px;<br>
+      line-height: 25px;<br>
+    }<br>
+  &lt;/style><br>
+</p>
+<img src="sample9.png">
 </body>
 
 </html>
